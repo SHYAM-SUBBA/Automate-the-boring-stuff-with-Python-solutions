@@ -1,0 +1,15 @@
+spam=['apples','bananas','tofu','cats']
+
+def SeparateByCommaSpace(ListToSeparate):
+    x=len(ListToSeparate)
+    ListToSeparate[x-1]='and '+ListToSeparate[x-1]
+    newStr=' '
+    for i in range(x):
+        if i<(x-1):
+            newStr+=ListToSeparate[i]+', '
+        else:
+            newStr+=ListToSeparate[i]+'.'
+    return newStr
+
+
+print(SeparateByCommaSpace(spam))
